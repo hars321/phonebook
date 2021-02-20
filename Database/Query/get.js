@@ -41,7 +41,14 @@ function findUser({name, email, page}){
                 reject({"message":"Cannot connect to the server"});
             }
             else if(result.length == 0){
-                reject ({"message":"No more data found"});
+
+                if(page == 1){
+                    reject ({"message":"No user found with given details"});
+                }   
+                else{
+                    reject ({"message":"No more data found"});
+                }
+                
             }
             else{
                 resolve(result);
@@ -71,7 +78,13 @@ function findAllUsers({page}){
                 reject({"message":"Cannot connect to the server"});
             }
             else if(result.length == 0){
-                reject ({"message":"No more data found"});
+                
+                if(page == 1){
+                    reject ({"message":"No user found with given details"});
+                }   
+                else{
+                    reject ({"message":"No more data found"});
+                }
             }
             else{
                 resolve(result);
