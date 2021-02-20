@@ -68,7 +68,7 @@ Route1 :        https://rentmojo-assignment.herokuapp.com/api/contact
                 
                 URL query parameters : name, email, page
                 
-URL example :   https://rentmojo-assignment.herokuapp.com/api/contact?phone=123&email=email@gmail.co&page=1
+URL example :   https://rentmojo-assignment.herokuapp.com/api/contact?phone=123&email=email@gmail.com&page=1
 
 -----------
 
@@ -120,6 +120,6 @@ Route :         https://rentmojo-assignment.herokuapp.com/api/contact
                 
                 URL Query Parameters : email
                 
-URL example :   https://rentmojo-assignment.herokuapp.com/api/contact?email@gmail.com 
+URL example :   https://rentmojo-assignment.herokuapp.com/api/contact?email=email@gmail.com 
 
 -------------------------------------------------------------------------------------------------
