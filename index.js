@@ -23,13 +23,21 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// routes
+app.use('/api',authenticateToken, getdata);
+app.use('/api',authenticateToken, putdata);
+app.use('/api',authenticateToken, postdata);
+app.use('/api',authenticateToken, deletedata);
 
-app.use('/',authenticateToken, getdata);
-app.use('/',authenticateToken, putdata);
-app.use('/',authenticateToken, postdata);
-app.use('/',authenticateToken, deletedata);
 
-
+app.get('/register',(req,res)=>{
+    res.json({
+        "Routes":[
+            {"/login": {"Method":"POST", "BODY":"email, password"}},
+            {"/signup": {"Method":"POST", "BODY":"email, password"}}
+        ]
+    })
+})
 
 app.post('/login',(req,res)=>{
     register.login(req.body)
